@@ -1,6 +1,6 @@
 1.Fruzsi
 2. Gergő
-3.
+3. Hajni
 4.
 5.
 6. Feri
@@ -9,11 +9,11 @@
 9.
 10. Balázs
 11.
-12.
+12.Adél
 13.
 14.
-15. 
-16. Andi
+15. Andi
+16.
 17.
 18.
 19. Albert
