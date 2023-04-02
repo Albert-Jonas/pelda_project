@@ -1,0 +1,1 @@
+print("hozzatok létre egy python file-t a HF_mappa-ban tetszőleges python kóddal")
