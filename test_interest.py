@@ -18,10 +18,20 @@ def testCalculatorLowerBounaryValues():
 
     assert actual_output == expected_output
 
+
 def testDataValidatorNominalValues():
     validator = DataValidator()
     expected_output = True
 
     actual_output = validator.validate_data(10000.0, 10.0, 12.0)
+
+    assert actual_output == expected_output
+
+
+def testDataValidatorStringValues():
+    validator = DataValidator()
+    expected_output = True
+
+    actual_output = validator.validate_data("10000.0", "10.0", "12.0")
 
     assert actual_output == expected_output
