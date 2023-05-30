@@ -28,10 +28,19 @@ def testDataValidatorNominalValues():
     assert actual_output == expected_output
 
 
-def testDataValidatorStringValues():
+def testDataValidatorNumeralStringValues():
     validator = DataValidator()
     expected_output = True
 
     actual_output = validator.validate_data("10000.0", "10.0", "12.0")
+
+    assert actual_output == expected_output
+
+
+def testDataValidatorNonNumeralStringValues():
+    validator = DataValidator()
+    expected_output = False
+
+    actual_output = validator.validate_data("Kecske", "10.0", "12.0")
 
     assert actual_output == expected_output

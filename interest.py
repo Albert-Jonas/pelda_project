@@ -1,10 +1,10 @@
 class DataValidator:
-    def validate_data(self, prinicpal, rate, time):
+    def validate_data(self, principal, rate, time):
         try:
             principal = float(principal)
             rate = float(rate)
             time = float(time)
-            if prinicpal > 0 and time > 0:
+            if principal > 0 and time > 0:
                 return True
             else:
                 return False
@@ -33,4 +33,3 @@ def CalculateMyPayment():
     else:
         print("B pont")
     pass
-
