@@ -11,17 +11,20 @@ class InterestCalculator:
         rate = rate / 100
         payment = prinicpal * (rate * pow((1 + rate),time)) / (pow((1 + rate),time) - 1)
         return payment
-    
 
-validator = DataValidator()
-calculator = InterestCalculator()
+def CalculateMyPayment():
 
-principal = input("Kérlek add meg a hitelösszeget: ")
-rate = input("Kérlek add meg a kamatlábat: ")
-time = input("Kérlek add meg a hitelidőt: ")
+    validator = DataValidator()
+    calculator = InterestCalculator()
 
-if validator.validate_data(principal, rate, time):
-    print("A havi fizetendő összeged a következő: ", calculator.calculate_interest(principal, rate, time))
-else:
+    principal = input("Kérlek add meg a hitelösszeget: ")
+    rate = input("Kérlek add meg a kamatlábat: ")
+    time = input("Kérlek add meg a hitelidőt: ")
+
+    if validator.validate_data(principal, rate, time):
+        print("A havi fizetendő összeged a következő: ", calculator.calculate_interest(principal, rate, time))
+        print("A pont")
+    else:
+        print("B pont")
     pass
 
