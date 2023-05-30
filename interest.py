@@ -14,13 +14,14 @@ class InterestCalculator:
     
 
 validator = DataValidator()
-#print(validator.validate_data(0.0, 0.0, 0.0))
-#print(validator.validate_data(10000, 10, 0))
-#print(validator.validate_data(10000.0, 10.0, 12.0))
-#print("-------------")
+calculator = InterestCalculator()
 
+principal = input("Kérlek add meg a hitelösszeget: ")
+rate = input("Kérlek add meg a kamatlábat: ")
+time = input("Kérlek add meg a hitelidőt: ")
 
-#print(calculator.calculate_interest(0.0, 0.0, 0.0))
-#print(calculator.calculate_interest(10000.0, 10.0, 12.0))
-#print(calculator.calculate_interest(12000.0, 5.0, 12.0))
-#print(calculator.calculate_interest(0.0, 5.0, 12.0))
+if validator.validate_data(principal, rate, time):
+    print("A havi fizetendő összeged a következő: ", calculator.calculate_interest(principal, rate, time))
+else:
+    pass
+
