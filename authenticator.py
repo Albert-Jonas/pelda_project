@@ -1,3 +1,5 @@
+import io
+
 class IIOHandler:
     def read_input(self ) -> str:
         pass
@@ -30,7 +32,7 @@ class DatabaseHandler(IDatabaseHandler):
 
         database = "database.txt"
 
-        with open(database, "r") as file:
+        with io.open(database, "r", encoding="utf-8") as file:
             for line in file:
                 stored_username, password = line.strip().split(" ")
                 if stored_username == userName:
@@ -46,8 +48,3 @@ class Authenticator(IAuthenticator):
             return True
         else:
             return False
-        
-
-authenticator = Authenticator()
-print(authenticator.authenticate("Jóska", "Almafa"))
-
