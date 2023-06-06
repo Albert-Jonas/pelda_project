@@ -48,3 +48,15 @@ class Authenticator(IAuthenticator):
             return True
         else:
             return False
+        
+
+class AuthenticatorTestable(IAuthenticator):
+    def __init__(self, databaseHandler: IDatabaseHandler):
+        self.databaseHandler = databaseHandler
+
+    def authenticate(self, userName: str, passWord: str):
+        storedPassword = self.databaseHandler.get_user_credentials(userName)
+        if storedPassword == passWord:
+            return True
+        else:
+            return False

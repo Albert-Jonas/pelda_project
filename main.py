@@ -31,5 +31,3 @@ authenticatorObject = Authenticator()
 
 authenticate = Authenticate(iohandler, databasehandler, authenticatorObject)
 authenticate.authenticate()
-
-
