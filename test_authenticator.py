@@ -13,6 +13,12 @@ def testAuthenticator():
     assert result == True
 
 
+def testAuthenticatorNameNotInDatabase():
+    auth = Authenticator()
+    result = auth.authenticate("Krisztián","Almafa")
+    assert result == False
+
+
 def testAuthenticatorTestable():
     databaseHandler = DatabaseHandlerTest()
     auth = AuthenticatorTestable(databaseHandler)
