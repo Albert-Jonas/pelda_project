@@ -2,7 +2,7 @@ import pytest
 from authenticator import *
 
 class DatabaseHandlerTest(IDatabaseHandler):
-    def get_user_credentials(userName):
+    def get_user_credentials(self, userName):
         return "Almafa"
 
 
@@ -13,7 +13,7 @@ def testAuthenticator():
     assert result == True
 
 
-def testAuthenticator():
+def testAuthenticatorTestable():
     databaseHandler = DatabaseHandlerTest()
     auth = AuthenticatorTestable(databaseHandler)
 
