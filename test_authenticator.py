@@ -18,7 +18,7 @@ def testAuthenticatorNameNotInDatabase():
     result = auth.authenticate("Krisztián","Almafa")
     assert result == False
 
-
+@pytest.mark.database_security
 def testAuthenticatorTestable():
     databaseHandler = DatabaseHandlerTest()
     auth = AuthenticatorTestable(databaseHandler)
