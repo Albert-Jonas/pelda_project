@@ -27,10 +27,10 @@ def text_file(request):
         os.rename(backup_filename, filename)
 
 
-@pytest.mark.parametrize('text_file', ["Sanyi Jelszo"], indirect=True)
-def test_example(text_file):
+@pytest.mark.parametrize('text_file', ['Sanyi Jelszo'], indirect=True)
+@pytest.mark.parametrize('username, password',[('Sanyi', 'Jelszo'), ('Béla', 'Macska')])
+def test_example(text_file, username, password):
     databaseHandler = DatabaseHandler()
-    result = databaseHandler.get_user_credentials("Sanyi")
+    result = databaseHandler.get_user_credentials(username)
 
-    assert result == "Jelszo"
-
+    assert result == password
